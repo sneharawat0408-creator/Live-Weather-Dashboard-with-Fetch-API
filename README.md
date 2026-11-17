@@ -1,0 +1,1 @@
+A responsive Live Weather Dashboard built using HTML, CSS, and JavaScript. It uses the Open-Meteo API and Fetch API to display real-time weather conditions, temperature, and a 5-day forecast for any searched city. Includes async/await, error handling, input validation, and localStorage to remember the last searched city.
