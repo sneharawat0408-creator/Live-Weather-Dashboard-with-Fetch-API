@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+#weatherForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    width: 70%;
+    max-width: 450px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+#searchBtn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: #082f49;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#searchBtn:hover {
+    background: #0ea5e9;
+}
+
+#searchBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#status {
+    text-align: center;
+    margin: 15px 0;
+    color: #facc15;
+}
+
+#currentWeather {
+    margin-top: 25px;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px;
+}
+
+.weather-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.temperature {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.weather-description {
+    font-size: 18px;
+    color: #bae6fd;
+}
+
+.forecast-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.forecast-card h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.forecast-card p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    #forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #weatherForm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cityInput,
+    #searchBtn {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .temperature {
+        font-size: 42px;
+    }
+}
